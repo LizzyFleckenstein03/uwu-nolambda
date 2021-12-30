@@ -1,4 +1,4 @@
-all: flow.so
+all: flow.so io.so
 
 uwu_include_path=../uwulang/
 

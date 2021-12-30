@@ -1,0 +1,9 @@
+main flow:linear(
+	io:print("please enter something:"),
+	io:print(io:scan),
+	io:print(:str:cat(
+		"your input: ",
+		io:scan("please enter something else: ")
+	)),
+	"success"
+)

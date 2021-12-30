@@ -11,7 +11,7 @@ nolambda is a collection of native [uwu](https://github.com/EliasFleckenstein03/
 ### `nolambda:io`
 
 - `nolambda:io:print`: Accepts an arbitrary value as $0 and prints it to stdout, followed by a newline. Returns $0.
-- `nolambda:io:scan`: Reads a line from stdin and returns it as a string, without the newline character at the end. This is interally using readline.
+- `nolambda:io:scan`: Reads a line from stdin and returns it as a string, without the newline character at the end. If $0 is given, it is used as a prompt (after converting to string).
 
 ### `nolambda:fs`
 
