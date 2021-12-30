@@ -1,6 +1,20 @@
 # nolambda
 nolambda is a collection of native [uwu](https://github.com/EliasFleckenstein03/uwulang) modules that break the lambda paradigm, such as linear execution, I/O, globals etc.
 
+## Building
+
+Make sure the submodules are checked out:
+
+```sh
+git submodule update --init
+```
+
+Build:
+
+```sh
+make uwu_include_path=/path/to/uwulang/repo
+```
+
 ## Modules
 
 ### `nolambda:flow`
