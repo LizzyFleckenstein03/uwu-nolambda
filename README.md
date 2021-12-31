@@ -33,7 +33,7 @@ Note: all file paths are relative to the _directory the program was started from
 
 - `nolambda:fs:read`: Accepts a file name (arbirary value, converted to string) as $0 and returns it's contents as a string. Causes an error if the file does not exist.
 - `nolambda:fs:write`: Accepts a file name (arbirary value, converted to string) as $0 and overwrites it with the contents in $1 (arbirary value, converted to string). Causes an error if the file could not be written. Returns `:nil:nil`.
-- `nolambda:fs:remove`: Accepts an arbitrary number of file names (arbirary type, converted to string), but at least one and unlinks them from the file system (the files can also be a directories). Causes an error if one of the file could not be removed, but does not cause an error if some or all of the files did not exist in the first place. Returns `:nil:nil`.
+- `nolambda:fs:remove`: Accepts an arbitrary number of file names (arbirary type, converted to string), but at least one and unlinks them from the file system (the files can also be a directories). Causes an error if one of the file could not be removed, or if some or all of the files did not exist in the first place. Returns `:nil:nil`.
 - `nolambda:fs:exists`: Accepts an arbitrary number of file names (arbirary type, converted to string), but at least one and returns `:bool:true` if all of them exist, `:bool:fase` else.
 
 ### `nolambda:os`
