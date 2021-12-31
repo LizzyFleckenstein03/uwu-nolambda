@@ -17,6 +17,8 @@ make uwu_include_path=/path/to/uwulang/repo
 
 ## Modules
 
+The following modules are implemented: `nolambda:flow`, `nolambda:io`, `nolambda:fs`. The modules `nolambda:os`, `nolambda:global`, and `nolambda:random` are ToDo.
+
 ### `nolambda:flow`
 
 - `nolambda:flow:linear`: Accepts an arbitrary number of arguments of arbitrary type, but at least one and evaulates all of them in order. Returns the last argument.
