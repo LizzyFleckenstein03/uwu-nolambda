@@ -11,7 +11,7 @@
 
 UwUVMValue uwu_read(UwUVMArgs *args)
 {
-	uwuutil_require_exact("nolambda:fs:read", args, 1);
+	uwuutil_require_exact("fs:read", args, 1);
 
 	char *filename = uwustr_get(uwuvm_get_arg(args, 0));
 
@@ -36,7 +36,7 @@ UwUVMValue uwu_read(UwUVMArgs *args)
 
 UwUVMValue uwu_write(UwUVMArgs *args)
 {
-	uwuutil_require_exact("nolambda:fs:write", args, 2);
+	uwuutil_require_exact("fs:write", args, 2);
 	
 	char *filename = uwustr_get(uwuvm_get_arg(args, 0));
 	char *contents = uwustr_get(uwuvm_get_arg(args, 1));
@@ -56,7 +56,7 @@ UwUVMValue uwu_write(UwUVMArgs *args)
 
 UwUVMValue uwu_remove(UwUVMArgs *args)
 {
-	uwuutil_require_min("nolambda:fs:remove", args, 1);
+	uwuutil_require_min("fs:remove", args, 1);
 
 	for (size_t i = 0; i < args->num; i++) {
 		char *filename = uwustr_get(uwuvm_get_arg(args, i));
@@ -71,7 +71,7 @@ UwUVMValue uwu_remove(UwUVMArgs *args)
 
 UwUVMValue uwu_exists(UwUVMArgs *args)
 {
-	uwuutil_require_min("nolambda:fs:exists", args, 1);
+	uwuutil_require_min("fs:exists", args, 1);
 
 	for (size_t i = 0; i < args->num; i++) {
 		char *filename = uwustr_get(uwuvm_get_arg(args, i));

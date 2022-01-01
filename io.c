@@ -9,7 +9,7 @@
 
 UwUVMValue uwu_print(UwUVMArgs *args)
 {
-	uwuutil_require_exact("nolambda:io:print", args, 1);
+	uwuutil_require_exact("io:print", args, 1);
 
 	UwUVMValue value = uwuvm_get_arg(args, 0);
 
@@ -22,7 +22,7 @@ UwUVMValue uwu_print(UwUVMArgs *args)
 
 UwUVMValue uwu_scan(UwUVMArgs *args)
 {
-	uwuutil_require_max("nolambda:io:scan", args, 1);
+	uwuutil_require_max("io:scan", args, 1);
 
 	char *prompt = NULL;
 

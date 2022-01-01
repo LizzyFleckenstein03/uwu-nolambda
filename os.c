@@ -10,7 +10,7 @@
 
 UwUVMValue uwu_exit(UwUVMArgs *args)
 {
-	uwuutil_require_max("nolambda:os:exit", args, 1);
+	uwuutil_require_max("os:exit", args, 1);
 
 	long exit_code = 0;
 
@@ -23,7 +23,7 @@ UwUVMValue uwu_exit(UwUVMArgs *args)
 
 UwUVMValue uwu_sleep(UwUVMArgs *args)
 {
-	uwuutil_require_exact("nolamda:os:sleep", args, 1);
+	uwuutil_require_exact("os:sleep", args, 1);
 
 	UwUVMValue value = uwuvm_get_arg(args, 0);
 
@@ -49,7 +49,7 @@ UwUVMValue uwu_sleep(UwUVMArgs *args)
 
 UwUVMValue uwu_execute(UwUVMArgs *args)
 {
-	uwuutil_require_exact("nolambda:os:execute", args, 1);
+	uwuutil_require_exact("os:execute", args, 1);
 
 	char *command = uwustr_get(uwuvm_get_arg(args, 0));
 	int ret = system(command);
@@ -60,7 +60,7 @@ UwUVMValue uwu_execute(UwUVMArgs *args)
 
 UwUVMValue uwu_time(UwUVMArgs *args)
 {
-	uwuutil_require_exact("nolamda:os:time", args, 0);
+	uwuutil_require_exact("os:time", args, 0);
 
 	struct timespec ts;
 	clock_gettime(CLOCK_REALTIME, &ts);
