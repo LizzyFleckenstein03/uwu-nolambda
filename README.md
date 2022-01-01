@@ -17,7 +17,7 @@ make uwu_include_path=/path/to/uwulang/repo
 
 ## Modules
 
-The following modules are implemented: `nolambda:flow`, `nolambda:io`, `nolambda:fs`. The modules `nolambda:os`, `nolambda:global`, and `nolambda:random` are ToDo.
+The following modules are implemented: `nolambda:flow`, `nolambda:io`, `nolambda:fs`, `nolambda:os`. The modules `nolambda:global`, and `nolambda:random` are ToDo.
 
 ### `nolambda:flow`
 
@@ -43,7 +43,7 @@ Note: all file paths are relative to the _directory the program was started from
 - `nolambda:os:exit`: Optionally takes an exit code (integer) as $0 and exits the program with the given exit code, or 0 if no exit code was given. Returns `:nil:nil` in theory.
 - `nolambda:os:sleep`: Takes an integer as $0 and pauses the execution of the program for $1 milliseconds. Returns `:nil:nil`.
 - `nolambda:os:execute`: Takes a command (arbirary value, converted to string) as $0 and executes it as a shell command. Returns the exit code of the command as an integer.
-- `nolambda:os:time`: Returns the current unix time as an integer.
+- `nolambda:os:time`: Returns the current unix millis as an integer.
 
 ### `nolambda:global`
 

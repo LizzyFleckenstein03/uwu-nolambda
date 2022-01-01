@@ -27,5 +27,11 @@ main flow:linear(
 		io:print("successfully removed file")
 	),
 
+	io:print(os:time),
+	os:sleep(500),
+	io:print(os:time),
+
+	os:execute("echo hello world"),
+
 	"success"
 )
