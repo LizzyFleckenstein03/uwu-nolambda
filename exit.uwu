@@ -1,1 +1,9 @@
-main os:exit(1)
+main .flow.linear(
+	.random.seed(.os.time),
+	.os.exit(
+		bool.if(int.equal(.random.random(1, 2), 1),
+			69,
+			int.sub(0, 8)
+		)
+	)
+)

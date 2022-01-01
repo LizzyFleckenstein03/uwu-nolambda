@@ -8,7 +8,7 @@
 
 UwUVMValue uwu_linear(UwUVMArgs *args)
 {
-	uwuutil_require_min("flow:linear", args, 1);
+	uwuutil_require_min("flow.linear", args, 1);
 
 	size_t return_arg = args->num - 1;
 
@@ -20,7 +20,7 @@ UwUVMValue uwu_linear(UwUVMArgs *args)
 
 UwUVMValue uwu_error(UwUVMArgs *args)
 {
-	uwuutil_require_exact("flow:error", args, 1);
+	uwuutil_require_exact("flow.error", args, 1);
 
 	char *err = uwustr_get(uwuvm_get_arg(args, 0));
 	fprintf(stderr, "%s\n", err);
