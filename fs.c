@@ -23,11 +23,13 @@ UwUVMValue uwu_read(UwUVMArgs *args)
 	if (size == 1) syserror("ftell", file);
 	if (fseek(file, 0, SEEK_SET) == -1) syserror("fseek", file);
 
-	char contents[size];
+	char contents[size + 1];
 	if (fread(contents, 1, size, file) != size) syserror("fread", file);
 
 	fclose(file);
 	free(filename);
+
+	contents[size] = '\0';
 
 	return uwustr_create(contents);
 }
