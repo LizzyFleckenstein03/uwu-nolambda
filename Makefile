@@ -1,4 +1,4 @@
-all: flow.so io.so fs.so os.so
+all: flow.so io.so fs.so os.so random.so
 
 uwu_include_path=../uwulang/
 

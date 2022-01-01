@@ -17,7 +17,7 @@ make uwu_include_path=/path/to/uwulang/repo
 
 ## Modules
 
-The following modules are implemented: `nolambda:flow`, `nolambda:io`, `nolambda:fs`, `nolambda:os`. The modules `nolambda:global`, and `nolambda:random` are ToDo.
+Note: The module `nolambda:global` is not implemented yet.
 
 ### `nolambda:flow`
 
@@ -54,6 +54,6 @@ Note: all file paths are relative to the _directory the program was started from
 
 ### `nolambda:random`
 
-- `nolambda:random:random`: Returns a pseudorandom integer between $0 (integer) and $1 (integer). The upper bound is exclusive, the lower bound inclusive. Causes an error if the range is bigger than `nolambda:random:max`.
-- `nolambda:random:max`: Returns RAND_MAX, which is usually 32767.
+- `nolambda:random:random`: Returns a pseudorandom integer between $0 (integer) and $1 (integer). The range is inclusive on both boundse. Causes an error if the range is bigger than `nolambda:random:max` or empty.
+- `nolambda:random:max`: Returns RAND_MAX.
 - `nolambda:random:seed`: Sets the random seed to $0 (integer) and returns `:nil:nil`.

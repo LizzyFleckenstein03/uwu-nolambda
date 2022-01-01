@@ -8,11 +8,6 @@ main flow:linear(
 	)),
 
 	io:print(:nil:nil),
-	io:print("--- QUINE ---"),
-	io:print(fs:read("test.uwu")),
-	io:print("--- END OF QUINE ---"),
-	io:print(:nil:nil),
-
 	fs:write("test", "hello world"),
 	:bool:if(fs:exists("test"),
 		io:print("successfully wrote file"),
@@ -27,11 +22,31 @@ main flow:linear(
 		io:print("successfully removed file")
 	),
 
+	io:print(:nil:nil),
 	io:print(os:time),
 	os:sleep(500),
 	io:print(os:time),
 
+	io:print(:nil:nil),
 	os:execute("echo hello world"),
 
+	io:print(:nil:nil),
+	io:print(:str:cat(
+		"Unseeded dice: ",
+		random:random(1, 6)
+	)),
+
+	random:seed(os:time),
+	io:print(:str:cat(
+		"Seeded dice: ",
+		random:random(1, 6)
+	)),
+
+	io:print(:str:cat(
+		"RAND_MAX = ",
+		random:max
+	)),
+
+	io:print(:nil:nil),
 	"success"
 )
