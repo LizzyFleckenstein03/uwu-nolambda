@@ -32,6 +32,10 @@ UwUVMValue uwu_scan(UwUVMArgs *args)
 		error("error: nolambda:io:scan requires exactly one or zero arguments\n");
 
 	char *return_string = linenoise(prompt);
+
+	if (! return_string)
+		return_string = strdup("");
+
 	UwUVMValue return_value = uwustr_create(return_string);
 
 	linenoiseFree(return_string);
