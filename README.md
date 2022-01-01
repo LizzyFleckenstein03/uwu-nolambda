@@ -1,5 +1,5 @@
 e# nolambda
-nolambda is a collection of native [uwu](https://github.com/EliasFleckenstein03/uwulang) modules that break the lambda paradigm, such as linear execution, I/O, globals etc.
+nolambda is a collection of native [uwu](https://github.com/EliasFleckenstein03/uwu-lang) modules that break the lambda paradigm, such as linear execution, I/O, globals etc.
 
 ## Building
 
