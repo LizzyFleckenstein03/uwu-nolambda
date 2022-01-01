@@ -5,11 +5,11 @@
 #include "common/err.h"
 #include "api/vm.h"
 #include "api/str.h"
+#include "api/util.h"
 
 UwUVMValue uwu_print(UwUVMArgs *args)
 {
-	if (args->num != 1)
-		error("error: nolambda:io:print requires exactly one argument\n");
+	uwuutil_require_exact("nolambda:io:print", args, 1);
 
 	UwUVMValue value = uwuvm_get_arg(args, 0);
 
@@ -22,14 +22,14 @@ UwUVMValue uwu_print(UwUVMArgs *args)
 
 UwUVMValue uwu_scan(UwUVMArgs *args)
 {
+	uwuutil_require_max("nolambda:io:scan", args, 1);
+
 	char *prompt = NULL;
 
 	if (args->num == 0)
 		prompt = strdup("");
-	else if (args->num == 1)
-		prompt = uwustr_get(uwuvm_get_arg(args, 0));
 	else
-		error("error: nolambda:io:scan requires exactly one or zero arguments\n");
+		prompt = uwustr_get(uwuvm_get_arg(args, 0));
 
 	char *return_string = linenoise(prompt);
 

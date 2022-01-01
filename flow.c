@@ -4,11 +4,11 @@
 #include "api/vm.h"
 #include "api/nil.h"
 #include "api/str.h"
+#include "api/util.h"
 
 UwUVMValue uwu_linear(UwUVMArgs *args)
 {
-	if (args->num < 1)
-		error("error: nolambda:flow:linear requires at least one argument\n");
+	uwuutil_require_min("nolambda:flow:linear", args, 1);
 
 	size_t return_arg = args->num - 1;
 
@@ -20,8 +20,7 @@ UwUVMValue uwu_linear(UwUVMArgs *args)
 
 UwUVMValue uwu_error(UwUVMArgs *args)
 {
-	if (args->num != 1)
-		error("error: nolambda:flow:error requires exactly one argument\n");
+	uwuutil_require_exact("nolambda:flow:error", args, 1);
 
 	char *err = uwustr_get(uwuvm_get_arg(args, 0));
 	fprintf(stderr, "%s\n", err);
